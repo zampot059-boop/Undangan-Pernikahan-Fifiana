@@ -4,11 +4,17 @@
     <title>Undangan Pernikahan</title>
 
     <style>
+@font-face {
+    font-family: "KunstlerWedding";
+    src: url("KUNSTLER.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
         body {
             text-align: center;
             font-family: Georgia, serif;
             background-image: url("batik.jpg");
-    background-size: 700px;
+    background-size: 500px auto;
     background-position: center;
     background-attachment: fixed;
     padding-top: 100px;
@@ -49,7 +55,7 @@ font-weight: normal;
             cursor: pointer;
         }
 .nama-pengantin {
-    font-family: "Kunstler Script", cursive;
+    font-family: "KunstlerWedding", cursive;
     font-size: 100px;
     font-weight: normal;
 }
@@ -95,7 +101,7 @@ font-weight: normal;
 .mempelai h3 {
     font-size: 70px;
     margin: 10px;
-  font-family: "Kunstler Script", cursive;
+  font-family: "KunstlerWedding", cursive;
 font-weight: normal;
 }
 
@@ -145,12 +151,12 @@ margin: 30px auto;
 
 #countdown small {
     font-size: 18px;
-}@media (max-width: 600px) {
-
+@media (max-width: 600px) {
     body {
-        padding-top: 50px;
+        background-size: 350px auto;
+        padding-top: 60px;
     }
-
+}
     h1 {
         font-size: 18px;
     }
