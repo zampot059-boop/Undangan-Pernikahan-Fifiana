@@ -1,36 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Undangan Pernikahan</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Zaenal & Fifiana</title>
 
     <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+
+            font-family: Georgia, serif;
+
+            background-color: #fffdf9;
+
+            color: #4b3028;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           COVER
+        ========================= */
+
         .cover {
-    min-height: 100svh;
+            width: 100%;
+            min-height: 100svh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            position: relative;
+
+            background-color: #fffdf9;
+        }
+
+
+        .cover-content {
     width: 100%;
-
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    background-image: url("batik.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    overflow: hidden;
-}
-
-.cover-content {
-    width: 100%;
-    max-width: 900px;
+    max-width: 380px;
 
     padding: 20px;
-
-    box-sizing: border-box;
 
     text-align: center;
 
@@ -38,399 +68,124 @@
     z-index: 2;
 }
 
-.judul-kecil {
-    font-family: Georgia, serif;
 
-    font-size: 24px;
+        .judul-kecil {
+            font-size: 18px;
 
-    letter-spacing: 5px;
+            letter-spacing: 3px;
 
-    margin: 0 0 20px;
+            margin-bottom: 20px;
+        }
 
-    color: #4b3028;
 
-    text-align: center;
-}
+        .nama-pengantin {
+            font-family: cursive;
 
-.nama-pengantin {
-    font-family: "KunstlerWedding", "Kunstler Script", cursive;
+            font-size: 52px;
 
-    font-size: 90px;
+            font-weight: normal;
 
-    font-weight: normal;
+            line-height: 1.1;
 
-    line-height: 1.1;
+            margin-bottom: 20px;
+        }
 
-    margin: 0 0 25px;
 
-    color: #4b3028;
+        .tanggal {
+            font-size: 16px;
 
-    text-align: center;
-}
+            letter-spacing: 2px;
 
-.tanggal {
-    font-family: Georgia, serif;
+            margin-bottom: 25px;
+        }
 
-    font-size: 20px;
 
-    letter-spacing: 3px;
+        .tombol-buka {
+            display: inline-block;
 
-    color: #4b3028;
+            padding: 12px 28px;
 
-    margin: 0 0 15px;
+            background-color: #8b634f;
 
-    text-align: center;
-}
+            color: white;
 
-.hiasan {
-    font-size: 40px;
+            text-decoration: none;
 
-    color: #8b5e4b;
+            border-radius: 30px;
 
-    margin: 5px 0 20px;
+            font-size: 15px;
+        }
 
-    text-align: center;
-}
 
-.tombol-buka {
-    display: inline-block;
+        /* =========================
+           ISI UNDANGAN
+        ========================= */
 
-    background-color: #8b634f;
+        .isi-undangan {
+            width: 100%;
 
-    color: white;
+            padding: 60px 20px;
 
-    text-decoration: none;
+            text-align: center;
+        }
 
-    border: none;
 
-    padding: 14px 35px;
+        .isi-undangan h2 {
+            font-size: 28px;
 
-    border-radius: 30px;
+            margin-bottom: 20px;
+        }
 
-    font-family: Georgia, serif;
 
-    font-size: 17px;
+        .isi-undangan p {
+            font-size: 16px;
 
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.tombol-buka:hover {
-    transform: scale(1.05);
-}
-@font-face {
-    font-family: "KunstlerWedding";
-    src: url("KUNSTLER.TTF") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-        body {
-    text-align: center;
-    font-family: Georgia, serif;
-background-image: url("batik.jpg");
-    background-color: white;
-    padding-top: 100px;
-}
-        body::before,
-body::after {
-    content: "";
+            line-height: 1.8;
+        }.
+batik {
     position: absolute;
+
     left: 0;
     width: 100%;
-    height: 180px;
+
+    height: 130px;
 
     background-image: url("batik.jpg");
-    background-size: 100% auto;
     background-repeat: no-repeat;
+    background-size: 100% auto;
 
-    z-index: -1;
+    z-index: 1;
 }
 
-body::before {
+.batik-atas {
     top: 0;
     background-position: top center;
 }
 
-body::after {
+.batik-bawah {
     bottom: 0;
     background-position: bottom center;
 }
-#isi {
-    background-color: rgba(255, 255, 255, 0.85);
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    border-radius: 20px;
-}
-        h1 {
-            font-size: 20px;
-            letter-spacing: 4px;
-            font-weight: bold;
-margin-top: 100px;
-        }
 
-h2 {
-            font-size: 70px;
-            margin: 20px 0;
-  font-family: "KunstlerWedding", cursive;
-font-weight: bold;
-        }
 
-        p {
-            font-size: 18px;
-        }
-
-        button {
-            margin-top: 30px;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            background-color: #6b4f3a;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-.nama-pengantin {
-    font-family: "KunstlerWedding", cursive;
-    font-size: 100px;
-    font-weight: bold;
-}
-.acara {
-    margin: 30px auto;
-    padding: 25px 30px;
-    max-width: 500px;
-    border-radius: 20px;
-}
-
-.acara h2 {
-    font-size: 70px;
-    margin-bottom: 15px;
-}
-#tombol-musik {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: #6b4f3a;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 999;
-}
-.mempelai {
-    text-align: center;
-    margin: 60px auto;
-    max-width: 600px;
-}
-
-.mempelai img {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 20px;
-}
-
-.mempelai h3 {
-    font-size: 70px;
-    margin: 10px;
-  font-family: "KunstlerWedding", cursive;
-font-weight: bold;
-}
-
-.mempelai p {
-    line-height: 1.8;
-}
-.ayat {
-    text-align: center;
-    max-width: 700px;
-    margin: 60px auto;
-    padding: 30px;
-}
-
-.arab {
-    font-size: 28px;
-    line-height: 2;
-    direction: rtl;
-}
-
-.terjemahan {
-    font-size: 16px;
-    font-style: italic;
-    line-height: 1.8;
-}
-#countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin: 30px auto;
- background-color: #F5F0E6;
-margin: 30px auto;
-    padding: 25px 30px;
-    border-radius: 20px;
-}
-
-#countdown div {
-    text-align: center;
-    min-width: 80px;
-}
-
-#countdown span {
-    font-size: 42px;
-    font-weight: bold;
-    display: block;
-}
-
-#countdown small {
-    font-size: 18px;
-@media (max-width: 600px) {
-    body {
-        background-size: 350px auto;
-        padding-top: 60px;
-    }
-}
-    h1 {
-        font-size: 18px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    .nama-pengantin {
-        font-size: 40px;
-    }
-
-    .mempelai {
-        padding: 15px;
-    }
-
-    .mempelai img {
-        width: 160px;
-        height: 200px;
-    }
-
-    .acara {
-        margin: 20px 15px;
-        padding: 20px;
-    }
-
-    
-    .ayat {
-        padding: 20px;
-        margin: 40px auto;
-    }
-
-    .arab {
-        font-size: 22px;
-    }
-
-}
-.ucapan {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 30px;
-    text-align: center;
-}
-
-.ucapan input,
-.ucapan textarea {
-    width: 90%;
-    padding: 12px;
-    margin: 8px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: inherit;
-}
-
-.ucapan textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-.ucapan button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-}
-        @media (max-width: 600px) {
-
-    .cover {
-        min-height: 100svh;
-
-        width: 100%;
-
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .cover-content {
-        width: 100%;
-
-        padding: 20px 15px;
-    }
-
-    .judul-kecil {
-        font-size: 20px;
-
-        letter-spacing: 4px;
-
-        margin-bottom: 20px;
-    }
-
-    .nama-pengantin {
-        font-size: 58px;
-
-        line-height: 1.15;
-
-        margin-bottom: 25px;
-    }
-
-    .tanggal {
-        font-size: 17px;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 15px;
-    }
-
-    .hiasan {
-        font-size: 35px;
-
-        margin-bottom: 20px;
-    }
-
-    .tombol-buka {
-        font-size: 16px;
-
-        padding: 13px 30px;
-
-        border-radius: 30px;
-    }
-}
     </style>
-
 </head>
 
+
 <body>
-<audio id="musik" loop>
-    <source src="musik.mp3" type="audio/mpeg">
-</audio>
-<button id="tombol-musik" onclick="toggleMusik()">🎵</button>
-<div id="cover">
+
+
+    <!-- COVER -->
 
     <section class="cover">
 
+    <div class="batik batik-atas"></div>
+
     <div class="cover-content">
 
-        <p class="judul-kecil">the wedding of</p>
+        <p class="judul-kecil">
+            the wedding of
+        </p>
 
         <h1 class="nama-pengantin">
             Zaenal & Fifiana
@@ -440,269 +195,35 @@ margin: 30px auto;
             29 AGUSTUS 2026
         </p>
 
-        <div class="hiasan">♡</div>
-
         <a href="#isi-undangan" class="tombol-buka">
             Buka Undangan
         </a>
 
     </div>
 
+    <div class="batik batik-bawah"></div>
+
 </section>
-</div>
-
-
-<section class="isi" id="isi-undangan">
-    
-    <h1>Assalamu'alaikum Warahmatullahi Wabarakatuh</h1>
-
-    <p>
-        Dengan memohon rahmat dan ridho Allah SWT,
-        kami bermaksud mengundang Bapak/Ibu/Saudara/i
-        untuk hadir dalam acara pernikahan kami.
-    </p>
-
-    <h2 class="nama-pengantin">
-        Zaenal & Fifiana
-    </h2>
-
-    <p>
-        Sabtu, 29 Agustus 2026
-    </p>
-<div class="mempelai">
-
-<img src="foto.jpg" alt="Mempelai Wanita">
-
-
-    <h3>Fifiana Fradika Natasya</h3>
-
-    <p>
-        Putri dari Bapak Sukemi<br>
-        & Ibu Suhartatik
-    </p>
-
-
-    <h3>&</h3>
 
 
 
-    <h3>Ahmad Zaenal Arifin</h3>
+    <!-- ISI UNDANGAN -->
 
-    <p>
-        Putra dari Bapak Masykur Hasyim<br>
-        & Ibu Ela nur laila
-    </p>
+    <section class="isi-undangan"
+             id="isi-undangan">
 
-</div>
-<div class="ayat">
+        <h2>
+            Selamat Datang
+        </h2>
 
-    <p class="arab">
-        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
-        لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
-    </p>
-
-    <p class="terjemahan">
-        "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
-        untukmu pasangan hidup dari jenismu sendiri supaya kamu
-        merasa tenteram kepadanya, dan dijadikan-Nya di antaramu
-        rasa kasih dan sayang."
-    </p>
-
-    <p>
-        <strong>QS. Ar-Rum: 21</strong>
-    </p>
-
-</div>
-<div id="countdown">
-<div>
         <p>
-        HITUNGAN MUNDUR
-    </p>
+            Dengan memohon rahmat dan ridho Allah SWT,
+            kami mengundang Anda untuk hadir dalam
+            acara pernikahan kami.
+        </p>
 
-    </div>
-    
-<div>
-        <span id="hari">0</span>
-        <small>Hari</small>
-    </div>
-
-    <div>
-        <span id="jam">0</span>
-        <small>Jam</small>
-    </div>
-
-    <div>
-        <span id="menit">0</span>
-        <small>Menit</small>
-    </div>
-
-    <div>
-        <span id="detik">0</span>
-        <small>Detik</small>
-    </div>
-
-</div>
+    </section>
 
 
-<div class="acara">
-
-    <h2>Akad Nikah</h2>
-
-    <p>
-        Sabtu, 29 Agustus 2026
-    </p>
-
-    <p>
-        Pukul 09.00 WIB
-    </p>
-
-        <h2>Tempat Akad Nikah</h2>
-<p>
-Jl. Raya Dlanggu desa No.46, Pohkecik, Kec. Dlanggu, Kabupaten Mojokerto, Jawa Timur 61371
-    </p>
-
-
-    <h2>Resepsi</h2>
-
-    <p>
-        Sabtu, 29 Agustus 2026
-    </p>
-
-    <p>
-        Pukul 11.00 WIB
-    </p>
-
-</div>
-
-
-<div class="lokasi">
-
-    <h2>Lokasi Acara</h2>
-
-    <p>
-      <br>
-dsn.Tirim Kidul, Ds.Tampung Rejo, puri mojokerto
-    </p>
-
-    <a href="https://www.google.com/maps?q=-7.572602,112.4351076&z=17&hl=id" target="_blank">
-        <button>Lihat Lokasi</button>
-    </a>
-
-</div>
-
-<div class="rsvp">
-
-    <h2>Konfirmasi Kehadiran</h2>
-
-    <p>
-        Mohon konfirmasi kehadiran Anda
-        melalui WhatsApp.
-    </p>
-
-    <a href="https://wa.me/085964299800?text=Assalamu%27alaikum%2C%20saya%20mengonfirmasi%20akan%20hadir%20di%20acara%20pernikahan%20Zaenal." target="_blank">
-        <button>Konfirmasi Kehadiran</button>
-    </a>
-
-</div>
-<div class="ucapan">
-
-    <h2>Ucapan & Doa</h2>
-
-    <p>
-        Berikan ucapan dan doa untuk kedua mempelai.
-    </p>
-
-    <input 
-        type="text" 
-        id="namaTamu" 
-        placeholder="Nama Anda"
-    >
-
-    <textarea 
-        id="pesanTamu" 
-        placeholder="Tulis ucapan dan doa..."
-    ></textarea>
-
-    <button onclick="kirimUcapan()">
-        Kirim Ucapan
-    </button>
-
-</div>
-<div id="cover">
-</div>
-</div>
-
-</div>
-
-
-<script>
-
-    function bukaUndangan() {
-    document.getElementById("cover").style.display = "none";
-    document.getElementById("isi").style.display = "block";
-
-    document.getElementById("musik").play();
-}
-
-
-    function countdown() {
-
-        const tanggalPernikahan = new Date("August 29, 2026 09:00:00").getTime();
-
-        const sekarang = new Date().getTime();
-
-        const selisih = tanggalPernikahan - sekarang;
-
-        const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
-
-        const jam = Math.floor(
-            (selisih % (1000 * 60 * 60 * 24))
-            / (1000 * 60 * 60)
-        );
-
-        const menit = Math.floor(
-            (selisih % (1000 * 60 * 60))
-            / (1000 * 60)
-        );
-
-        const detik = Math.floor(
-            (selisih % (1000 * 60))
-            / 1000
-        );
-
-        document.getElementById("hari").innerHTML = hari;
-        document.getElementById("jam").innerHTML = jam;
-        document.getElementById("menit").innerHTML = menit;
-        document.getElementById("detik").innerHTML = detik;
-    }
-
-    setInterval(countdown, 1000);
-
-    countdown();
-function toggleMusik() {
-
-    const musik = document.getElementById("musik");
-
-    if (musik.paused) {
-        musik.play();
-    } else {
-        musik.pause();
-    }
-
-}
-function kirimUcapan() {
-
-    const nama = document.getElementById("namaTamu").value;
-    const pesan = document.getElementById("pesanTamu").value;
-
-    if (nama === "" || pesan === "") {
-        alert("Silakan isi nama dan ucapan terlebih dahulu.");
-        return;
-    }
-
-    alert("Terima kasih atas ucapan dan doanya, " + nama + "!");
-
-}
-</script>
 </body>
 </html>
