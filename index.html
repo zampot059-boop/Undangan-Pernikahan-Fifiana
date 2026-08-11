@@ -4,6 +4,90 @@
     <title>Undangan Pernikahan</title>
 
     <style>
+        .cover {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image: url("batik.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.cover-content {
+    width: 90%;
+    max-width: 900px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.judul-kecil {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    color: #4b3028;
+}
+
+.nama-pengantin {
+    font-family: "KunstlerWedding", "Kunstler Script", cursive;
+    font-size: 75px;
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin: 10px 0 20px;
+
+    color: #4b3028;
+
+    text-align: center;
+}
+
+.tanggal {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+
+    color: #4b3028;
+
+    margin: 15px 0;
+}
+
+.hiasan {
+    font-size: 35px;
+    color: #8b5e4b;
+
+    margin: 10px 0 20px;
+}
+
+.tombol-buka {
+    background-color: #8b634f;
+    color: white;
+
+    border: none;
+
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
 @font-face {
     font-family: "KunstlerWedding";
     src: url("KUNSTLER.TTF") format("truetype");
@@ -244,6 +328,46 @@ margin: 30px auto;
     border-radius: 25px;
     cursor: pointer;
 }
+        @media (max-width: 600px) {
+
+    .cover {
+        min-height: 100vh;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cover-content {
+        width: 92%;
+        padding: 30px 10px;
+    }
+
+    .judul-kecil {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .nama-pengantin {
+        font-size: 48px;
+        line-height: 1.15;
+
+        margin: 15px 0;
+    }
+
+    .tanggal {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .hiasan {
+        font-size: 28px;
+    }
+
+    .tombol-buka {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+}
     </style>
 
 </head>
@@ -255,14 +379,29 @@ margin: 30px auto;
 <button id="tombol-musik" onclick="toggleMusik()">🎵</button>
 <div id="cover">
 
-    <h1>the wedding of</h1>
+    <section class="cover">
 
-    <h2 class="nama-pengantin">Zaenal & Fifiana</h2>
+    <div class="cover-content">
 
-    <p>29 AGUSTUS 2026</p>
+        <p class="judul-kecil">the wedding of</p>
 
-    <button onclick="bukaUndangan()">Buka Undangan</button>
+        <h1 class="nama-pengantin">
+            Zaenal & Fifiana
+        </h1>
 
+        <p class="tanggal">
+            29 AGUSTUS 2026
+        </p>
+
+        <div class="hiasan">♡</div>
+
+        <button class="tombol-buka">
+            Buka Undangan
+        </button>
+
+    </div>
+
+</section>
 </div>
 
 
