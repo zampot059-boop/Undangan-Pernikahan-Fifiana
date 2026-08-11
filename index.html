@@ -228,6 +228,76 @@
     font-size: 15px;
     line-height: 1.9;
 }
+        /* SISTEM HALAMAN */
+
+body {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.halaman {
+    width: 100%;
+    height: 100svh;
+
+    position: fixed;
+    top: 0;
+    left: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    transition: left 0.5s ease;
+
+    overflow: hidden;
+}
+
+.halaman.aktif {
+    left: 0;
+}
+
+.navigasi {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.tombol-navigasi {
+    border: none;
+
+    background-color: #a8735d;
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.tombol-navigasi:active {
+    transform: scale(0.95);
+}
     </style>
 </head>
 
@@ -270,7 +340,7 @@ function bukaUndangan() {
     document.body.classList.add("undangan-buka");
 }
 </script>
-    <section class="pembukaan" id="isi-undangan">
+   <section class="halaman aktif" id="halaman-ayat">
 
     <p class="basmalah">
         بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
@@ -289,6 +359,93 @@ function bukaUndangan() {
         dan Dia menjadikan di antaramu rasa kasih dan sayang.
     </p>
 
+    <div class="navigasi">
+
+        <button class="tombol-navigasi"
+                onclick="sebelumnya()">
+            ← Sebelumnya
+        </button>
+
+        <button class="tombol-navigasi"
+                onclick="selanjutnya()">
+            Selanjutnya →
+        </button>
+
+    </div>
+
 </section>
+    <section class="halaman" id="halaman-2">
+
+    <h2>
+        MEMPELAI
+    </h2>
+
+    <p>
+        Zaenal
+    </p>
+
+    <p>
+        &
+    </p>
+
+    <p>
+        Fifiana
+    </p>
+
+    <div class="navigasi">
+
+        <button class="tombol-navigasi"
+                onclick="sebelumnya()">
+            ← Sebelumnya
+        </button>
+
+        <button class="tombol-navigasi"
+                onclick="selanjutnya()">
+            Selanjutnya →
+        </button>
+
+    </div>
+
+</section>
+    <script>
+
+let halamanSekarang = 0;
+
+const halaman = document.querySelectorAll(".halaman");
+
+function tampilkanHalaman(index) {
+
+    if (index < 0) {
+        return;
+    }
+
+    if (index >= halaman.length) {
+        return;
+    }
+
+    halaman.forEach(function(item) {
+        item.classList.remove("aktif");
+    });
+
+    halaman[index].classList.add("aktif");
+
+    halamanSekarang = index;
+}
+
+
+function selanjutnya() {
+
+    tampilkanHalaman(halamanSekarang + 1);
+
+}
+
+
+function sebelumnya() {
+
+    tampilkanHalaman(halamanSekarang - 1);
+
+}
+
+</script>
 </body>
 </html>
