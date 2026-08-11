@@ -115,6 +115,9 @@
 
             font-size: 15px;
         }
+        body:not(.undangan-buka) {
+    overflow: hidden;
+}
 
 
         /* =========================
@@ -186,6 +189,46 @@
     position: relative;
     z-index: 2;
 }
+        .pembukaan {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 80px 25px;
+
+    background-color: #1d1b19;
+
+    color: #f3c5c0;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.basmalah {
+    font-size: 26px;
+    line-height: 2;
+
+    margin-bottom: 35px;
+}
+
+.ayat {
+    max-width: 380px;
+
+    font-size: 21px;
+    line-height: 2.1;
+
+    margin-bottom: 30px;
+}
+
+.terjemahan {
+    max-width: 360px;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
     </style>
 </head>
 
@@ -213,10 +256,11 @@
             29 AGUSTUS 2026
         </p>
 
-        <a href="#isi-undangan" class="tombol-buka">
-            Buka Undangan
-        </a>
-
+        <a href="#isi-undangan"
+   class="tombol-buka"
+   onclick="bukaUndangan()">
+    Buka Undangan
+</a>
     </div>
 
     <img src="batik.jpg" class="batik-bawah">
@@ -241,6 +285,30 @@
 
     </section>
 
+<script>
+function bukaUndangan() {
+    document.body.classList.add("undangan-buka");
+}
+</script>
+    <section class="pembukaan" id="isi-undangan">
 
+    <p class="basmalah">
+        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    </p>
+
+    <p class="ayat">
+        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ
+        أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا
+        وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+    </p>
+
+    <p class="terjemahan">
+        Dan di antara tanda-tanda kekuasaan-Nya ialah
+        Dia menciptakan untukmu pasangan hidup dari jenismu
+        sendiri, supaya kamu merasa tenteram kepadanya,
+        dan Dia menjadikan di antaramu rasa kasih dan sayang.
+    </p>
+
+</section>
 </body>
 </html>
