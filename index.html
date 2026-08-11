@@ -5,7 +5,8 @@
 
     <style>
         .cover {
-    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
 
     position: relative;
 
@@ -16,7 +17,7 @@
     text-align: center;
 
     background-image: url("batik.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -24,10 +25,12 @@
 }
 
 .cover-content {
-    width: 90%;
+    width: 100%;
     max-width: 900px;
 
-    padding: 40px 20px;
+    padding: 20px;
+
+    box-sizing: border-box;
 
     text-align: center;
 
@@ -37,20 +40,28 @@
 
 .judul-kecil {
     font-family: Georgia, serif;
-    font-size: 20px;
+
+    font-size: 24px;
+
     letter-spacing: 5px;
-    margin-bottom: 15px;
+
+    margin: 0 0 20px;
+
     color: #4b3028;
+
+    text-align: center;
 }
 
 .nama-pengantin {
     font-family: "KunstlerWedding", "Kunstler Script", cursive;
-    font-size: 75px;
+
+    font-size: 90px;
+
     font-weight: normal;
 
     line-height: 1.1;
 
-    margin: 10px 0 20px;
+    margin: 0 0 25px;
 
     color: #4b3028;
 
@@ -59,34 +70,54 @@
 
 .tanggal {
     font-family: Georgia, serif;
-    font-size: 18px;
+
+    font-size: 20px;
+
     letter-spacing: 3px;
 
     color: #4b3028;
 
-    margin: 15px 0;
+    margin: 0 0 15px;
+
+    text-align: center;
 }
 
 .hiasan {
-    font-size: 35px;
+    font-size: 40px;
+
     color: #8b5e4b;
 
-    margin: 10px 0 20px;
+    margin: 5px 0 20px;
+
+    text-align: center;
 }
 
 .tombol-buka {
+    display: inline-block;
+
     background-color: #8b634f;
+
     color: white;
+
+    text-decoration: none;
 
     border: none;
 
-    padding: 12px 30px;
+    padding: 14px 35px;
 
     border-radius: 30px;
 
-    font-size: 16px;
+    font-family: Georgia, serif;
+
+    font-size: 17px;
 
     cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.tombol-buka:hover {
+    transform: scale(1.05);
 }
 @font-face {
     font-family: "KunstlerWedding";
@@ -331,41 +362,57 @@ margin: 30px auto;
         @media (max-width: 600px) {
 
     .cover {
-        min-height: 100vh;
+        min-height: 100svh;
 
-        background-size: cover;
+        width: 100%;
+
+        background-size: 100% 100%;
         background-position: center;
+        background-repeat: no-repeat;
     }
 
     .cover-content {
-        width: 92%;
-        padding: 30px 10px;
+        width: 100%;
+
+        padding: 20px 15px;
     }
 
     .judul-kecil {
-        font-size: 15px;
-        letter-spacing: 3px;
+        font-size: 20px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 20px;
     }
 
     .nama-pengantin {
-        font-size: 48px;
+        font-size: 58px;
+
         line-height: 1.15;
 
-        margin: 15px 0;
+        margin-bottom: 25px;
     }
 
     .tanggal {
-        font-size: 14px;
+        font-size: 17px;
+
         letter-spacing: 2px;
+
+        margin-bottom: 15px;
     }
 
     .hiasan {
-        font-size: 28px;
+        font-size: 35px;
+
+        margin-bottom: 20px;
     }
 
     .tombol-buka {
-        font-size: 14px;
-        padding: 10px 25px;
+        font-size: 16px;
+
+        padding: 13px 30px;
+
+        border-radius: 30px;
     }
 }
     </style>
@@ -395,9 +442,9 @@ margin: 30px auto;
 
         <div class="hiasan">♡</div>
 
-        <button class="tombol-buka">
+        <a href="#isi-undangan" class="tombol-buka">
             Buka Undangan
-        </button>
+        </a>
 
     </div>
 
@@ -405,8 +452,8 @@ margin: 30px auto;
 </div>
 
 
-<div id="isi" style="display: none;">
-
+<section class="isi" id="isi-undangan">
+    
     <h1>Assalamu'alaikum Warahmatullahi Wabarakatuh</h1>
 
     <p>
